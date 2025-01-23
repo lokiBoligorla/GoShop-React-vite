@@ -7,6 +7,7 @@ import Hero from './Components/Hero'
 import FeaturedProducts from './Components/Featured'
 import SearchBar from './Components/Search'
 import Footer from './Components/Footer'
+import Contact from './Components/Contact'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
      <Hero/>
      <FeaturedProducts/>
      <SearchBar/>
+     <Contact/>
      <Footer/>
     </div>
   )

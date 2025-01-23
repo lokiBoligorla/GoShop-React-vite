@@ -12,7 +12,7 @@ const Categories = () => {
   ];
 
   return (
-    <div className="categories-container">
+    <div className="categories-container" id="categories">
       <h2 className="categories-title">Shop by Category</h2>
       <div className="categories-grid">
         {categories.map((category, index) => (

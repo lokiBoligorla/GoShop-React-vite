@@ -573,54 +573,40 @@ body {
 
 
 /* Footer Container */
-
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
+/* Main footer container */
 .footer {
-  background: linear-gradient(135deg, #1c1c1c, #4a4a4a);
-  color: #fff;
-  padding: 60px 20px;
+  background-color: #222222;
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
   text-align: center;
-  position: relative;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .footer-left, .footer-middle, .footer-right {
-  flex: 1;
+  flex: 1 1 30%;
   margin: 10px;
+  padding: 10px;
 }
 
-.footer-left {
-  text-align: left;
+/* Footer Branding */
+.footer-brand {
+  font-size: 2.5rem;
+  color: #f39c12;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.footer-left h3 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ff4081; /* Vibrant pink color */
-  margin-bottom: 15px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.footer-left p {
-  font-size: 1.1rem;
-  color: #ddd;
+.footer-description {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 20px;
 }
 
 .social-links {
@@ -628,110 +614,500 @@ body {
 }
 
 .social-icon {
-  margin: 0 15px;
-  font-size: 1.5rem;
-  color: #fff;
+  color: white;
+  margin: 0 10px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 1.3rem;
+  transition: color 0.3s;
 }
 
 .social-icon:hover {
-  color: #ff4081; /* Hover color matches the header */
+  color: #f39c12;
 }
 
-.footer-middle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.footer-links {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 30px;
-  justify-content: center;
-}
-
+/* Footer Links */
 .footer-links a {
-  color: #fff;
-  font-size: 1.2rem;
+  display: block;
+  color: #bbb;
   text-decoration: none;
-  letter-spacing: 1px;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  margin: 10px 0;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #ff4081; /* Hover effect for links */
+  color: #f39c12;
 }
 
-.footer-right {
-  text-align: left;
-}
-
-.footer-right h4 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  color: #fff;
+/* Subscription form */
+.subscribe-heading {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .subscribe-form {
   display: flex;
-  gap: 10px;
   justify-content: center;
+  margin-top: 10px;
 }
 
-.subscribe-form input {
-  padding: 12px;
-  font-size: 1rem;
+.subscribe-input {
+  padding: 10px;
+  border: none;
   border-radius: 5px;
-  border: 2px solid #4a4a4a;
-  outline: none;
-  width: 300px;
-  transition: border 0.3s ease;
+  width: 250px;
+  font-size: 1rem;
 }
 
-.subscribe-form input:focus {
-  border-color: #ff4081; /* Focus state with pink color */
-}
-
-.subscribe-form button {
-  padding: 12px 25px;
-  background-color: #ff4081;
+.subscribe-button {
+  padding: 10px 20px;
+  background-color: #f39c12;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  margin-left: 10px;
+  transition: background-color 0.3s;
 }
 
-.subscribe-form button:hover {
-  background-color: #f50057; /* Darker pink on hover */
+.subscribe-button:hover {
+  background-color: #e67e22;
 }
 
-@media (max-width: 768px) {
+/* Footer Bottom Section */
+.footer-bottom {
+  background-color: #111;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+
+/* For small devices like phones and tablets */
+@media screen and (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    padding: 0 10px;
   }
 
   .footer-left, .footer-middle, .footer-right {
-    margin: 20px 0;
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-left .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .footer-left .footer-description {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+
+  .subscribe-input {
+    width: 220px;
+    font-size: 0.9rem;
+  }
+
+  .subscribe-button {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding: 10px;
   }
 }
+
+/* For very small devices like mobile phones in portrait orientation */
+@media screen and (max-width: 480px) {
+  .footer-container {
+    padding: 0 5px;
+  }
+
+  .footer-brand {
+    font-size: 2rem;
+  }
+
+  .footer-description {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+
+  .social-links {
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .subscribe-input {
+    width: 180px;
+    font-size: 0.85rem;
+  }
+
+  .subscribe-button {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+}
+
+/* For larger tablets or devices with larger screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    flex: 1 1 30%;
+  }
+
+  .footer-left .footer-description {
+    font-size: 1rem;
+  }
+
+  .footer-links a {
+    font-size: 1rem;
+  }
+
+  .subscribe-input {
+    width: 250px;
+  }
+
+  .subscribe-button {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.9rem;
+  }
+}
+ 
 
 
 
 .logo {
-  width: 100px; /* Adjust the width of the logo */
-  height: 100px; /* Adjust the height of the logo */
-  border-radius: 50%; /* Makes the image round */
-  object-fit: cover; /* Ensures the image fits within the circle */
-  display: block; /* Makes sure the image is a block element */
-  margin: 0 auto; /* Centers the logo if it's in a container */
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  display: block; 
+  margin: 0 auto; 
 }
 .logo:hover {
   transform: scale(1.1);
+}
+
+
+
+/* Contact Container */
+
+.contact-section {
+  background: white;
+  padding: 60px 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #161414;
+  height: auto; /* Removed 100vh for better control */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.contact-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 25px; /* Reduced padding */
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  max-width: 600px; /* Reduced max width */
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+}
+
+.contact-heading {
+  font-size: 2rem; /* Slightly reduced font size */
+  text-align: center;
+  margin-bottom: 15px; /* Reduced margin */
+  color: #f39c12;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact-description {
+  text-align: center;
+  font-size: 0.9rem; /* Reduced font size */
+  margin-bottom: 30px; /* Reduced margin */
+  color: #ccc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 20px; /* Reduced margin */
+  position: relative;
+}
+
+.input-group label {
+  font-size: 1rem; /* Reduced label font size */
+  margin-bottom: 8px; /* Reduced margin */
+  color: #fff;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px; /* Reduced padding */
+  font-size: 1rem; /* Reduced font size */
+  background: #1c1c1c;
+  border: 2px solid #444;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #f39c12;
+  box-shadow: 0 0 10px rgba(243, 156, 18, 0.7);
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label {
+  opacity: 1;
+  transform: translateY(-8px); /* Slightly reduced the translate amount */
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.submit-button {
+  padding: 12px 22px; /* Reduced padding */
+  background-color: #f39c12;
+  color: white;
+  font-size: 1.1rem; /* Slightly reduced font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px; /* Reduced margin */
+}
+
+.submit-button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+/* Hover Effects */
+.input-group input:hover,
+.input-group textarea:hover {
+  border-color: #f39c12;
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+
+/* For smaller devices like tablets and phones */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 25px 20px;
+    width: 90%;
+  }
+
+  .contact-heading {
+    font-size: 1.8rem; /* Reduced font size */
+  }
+
+  .contact-description {
+    font-size: 0.85rem; /* Reduced font size */
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 0.95rem; /* Reduced font size */
+  }
+
+  .submit-button {
+    font-size: 1rem; /* Slightly reduced font size */
+    padding: 10px 18px; /* Reduced padding */
+  }
+}
+
+/* For very small devices like mobile phones in portrait orientation */
+@media screen and (max-width: 480px) {
+  .contact-heading {
+    font-size: 1.6rem; /* Further reduced font size */
+  }
+
+  .contact-description {
+    font-size: 0.8rem; /* Reduced font size */
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 0.95rem; /* Reduced font size */
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 10px 16px; /* Reduced padding */
+  }
+}
+
+
+
+/* Responsive Web Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .header-search {
+    width: 80%; /* Adjust width on smaller screens */
+    margin-top: 10px;
+  }
+
+  .header-links {
+    display: flex;
+    flex-direction: column; /* Stack categories vertically */
+    margin-top: 20px;
+  }
+
+  .header-link {
+    font-size: 1.2rem;
+  }
+}
+
+
+.banner-container {
+  display: flex;
+  flex-direction: row; /* Default for larger screens */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-content {
+  flex: 1;
+}
+
+.banner-image img {
+  width: 100%; /* Make the image responsive */
+  max-width: 100%; 
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+    text-align: center;
+  }
+
+  .banner-title {
+    font-size: 2rem; /* Adjust font size */
+  }
+
+  .banner-text {
+    font-size: 1rem; /* Adjust text size */
+  }
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default for larger screens */
+}
+
+@media (max-width: 1024px) {
+  .product-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-cards {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+}
+
+.landing-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-content {
+  width: 50%; /* Adjust text content width */
+}
+
+.image-content {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .landing-content {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+  }
+
+  .text-content, .image-content {
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%; /* Make button full-width on smaller screens */
+  }
 }

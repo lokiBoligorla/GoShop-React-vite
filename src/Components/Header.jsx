@@ -12,10 +12,10 @@ const Header = () => {
       <input type="text" placeholder="Search" className="header-search" />
       <button className="header-link1">Login/SignUp</button>
       <div className="header-links">
-        <h4 className="header-link">Men</h4>
-        <h4 className="header-link">Women</h4>
-        <h4 className="header-link">Children</h4>
-        <h4 className="header-link">Beauty</h4>
+        <h4 className="header-link"><a href="#categories">Men</a> </h4>
+        <h4 className="header-link"><a href="#categories">Women</a></h4>
+        <h4 className="header-link"><a href="#categories">Children</a></h4>
+        <h4 className="header-link"><a href="#categories">Beauty</a></h4>
       </div>
     </div>
   );
